@@ -138,3 +138,9 @@ a.card:hover{background:var(--paper)}
 .field input:focus{border-bottom-color:#B99A6E;outline:none}
 .form-note{font-size:.8125rem;color:#93A3B5;margin-top:1.5rem;max-width:52ch}
 .hp{position:absolute;left:-9999px}
+.recognition li a{display:block;text-decoration:none;color:inherit;position:relative;transition:padding-left .25s}
+.recognition li a:hover{padding-left:.6rem}
+.recognition li a .go{display:block;margin-top:.6rem;font-size:.6875rem;letter-spacing:.14em;text-transform:uppercase;color:var(--bronze);opacity:0;transform:translateY(-4px);transition:opacity .25s,transform .25s}
+.recognition li a:hover .go,.recognition li a:focus-visible .go{opacity:1;transform:none}
+@media (hover:none){.recognition li a .go{opacity:1;transform:none}}
+@media (prefers-reduced-motion:reduce){.recognition li a,.recognition li a .go{transition:none}.recognition li a .go{opacity:1;transform:none}}

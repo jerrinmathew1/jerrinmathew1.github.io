@@ -144,3 +144,8 @@ a.card:hover{background:var(--paper)}
 .recognition li a:hover .go,.recognition li a:focus-visible .go{opacity:1;transform:none}
 @media (hover:none){.recognition li a .go{opacity:1;transform:none}}
 @media (prefers-reduced-motion:reduce){.recognition li a,.recognition li a .go{transition:none}.recognition li a .go{opacity:1;transform:none}}
+.signpost{display:flex;align-items:center;justify-content:space-between;gap:clamp(1.5rem,4vw,3rem);flex-wrap:wrap;margin-top:2.5rem;padding:2rem 1.75rem;border:1px solid var(--rule);background:var(--paper)}
+.signpost h3{font-size:1.1875rem;margin-bottom:.65rem}
+.signpost p{font-size:.9375rem;color:var(--ink-soft);max-width:56ch}
+.signpost .btn{flex:none}
+@media (max-width:640px){.signpost{padding:1.75rem 1.5rem}.signpost .btn{width:100%;text-align:center}}

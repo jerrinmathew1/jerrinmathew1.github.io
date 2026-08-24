@@ -149,3 +149,7 @@ a.card:hover{background:var(--paper)}
 .signpost p{font-size:.9375rem;color:var(--ink-soft);max-width:56ch}
 .signpost .btn{flex:none}
 @media (max-width:640px){.signpost{padding:1.75rem 1.5rem}.signpost .btn{width:100%;text-align:center}}
+.form-status{font-size:.875rem;margin-top:1.25rem;min-height:1px}
+.form-status.is-ok{color:#B99A6E}
+.form-status.is-err{color:#E8A9A0}
+#signup-btn[disabled]{opacity:.6;cursor:default}

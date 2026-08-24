@@ -156,11 +156,13 @@
         <div><span class="eyebrow">Stay connected</span><h2>You don't have to wait until something breaks.</h2></div>
         <div class="signup">
           <p style="margin-bottom:2rem">I'm not accepting patients yet. If you'd like to know when the practice opens, leave an email address and I'll write when there's something worth telling you &mdash; not more often.</p>
-          <form action="https://formspree.io/f/" method="POST">
+          <form id="signup-form" action="https://formspree.io/f/mrpzwqzb" method="POST">
             <div class="field"><label for="name">Name</label><input type="text" id="name" name="name" autocomplete="name"></div>
             <div class="field"><label for="email">Email address</label><input type="email" id="email" name="email" autocomplete="email" required></div>
+            <input type="hidden" name="_subject" value="Practice updates signup">
             <input class="hp" type="text" name="_gotcha" tabindex="-1" autocomplete="off" aria-hidden="true">
-            <button class="btn btn--light" type="submit">Send</button>
+            <button class="btn btn--light" type="submit" id="signup-btn">Send</button>
+            <p class="form-status" id="signup-status" role="status" aria-live="polite"></p>
             <p class="form-note">Please don't include health information, symptoms, or clinical questions in this form. It is not a secure or confidential channel, and submitting it does not create a clinician-patient relationship.</p>
           </form>
         </div>
@@ -174,6 +176,33 @@
   <p>If you are in crisis or having thoughts of suicide, call or text <strong>988</strong> in the United States, or go to your nearest emergency department.</p>
   <p>&copy; <span id="yr">2026</span> Jerrin Mathew. All rights reserved.</p>
 </footer>
+<script>
+(function(){
+  var f=document.getElementById('signup-form');
+  if(!f||!window.fetch)return;
+  var b=document.getElementById('signup-btn'),m=document.getElementById('signup-status');
+  f.addEventListener('submit',function(e){
+    e.preventDefault();
+    m.className='form-status';m.textContent='';
+    b.disabled=true;b.textContent='Sending';
+    fetch(f.action,{method:'POST',body:new FormData(f),headers:{'Accept':'application/json'}})
+      .then(function(r){
+        if(r.ok){f.reset();m.className='form-status is-ok';
+          m.textContent='Thank you. You will hear from me when there is something worth sending.';
+          b.textContent='Sent';return;}
+        return r.json().then(function(d){
+          var t=(d&&d.errors&&d.errors.length)?d.errors.map(function(x){return x.message;}).join(', ')
+            :'Something went wrong. Please email me directly instead.';
+          m.className='form-status is-err';m.textContent=t;
+          b.disabled=false;b.textContent='Send';});
+      })
+      .catch(function(){
+        m.className='form-status is-err';
+        m.textContent='Could not reach the server. Please check your connection or email me directly.';
+        b.disabled=false;b.textContent='Send';});
+  });
+})();
+</script>
 <script>document.getElementById('yr').textContent=new Date().getFullYear();</script>
 </body>
 </html>

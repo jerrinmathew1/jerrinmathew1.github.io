@@ -599,10 +599,10 @@ html {
 }
 
 
-/* REAL TALK SECTION - NAVY BLUE */
+/* REAL TALK SECTION - NAVY BLUE with HIGH CONTRAST */
 .band--blue {
   background: var(--navy);
-  color: white;
+  color: #EDE9E1;
 }
 .band--blue .eyebrow {
   color: var(--bronze-light);
@@ -611,7 +611,12 @@ html {
   color: white;
 }
 .band--blue .recognition a {
-  color: #EDE9E1;
+  color: #F7F5F0;
+  text-decoration: none;
+}
+.band--blue .recognition a strong {
+  color: var(--bronze-light);
+  font-weight: 600;
 }
 .band--blue .recognition a:hover {
   color: var(--bronze-light);
@@ -619,10 +624,18 @@ html {
 .band--blue .recognition a::after {
   background: var(--bronze-light);
 }
+.band--blue .recognition .go {
+  color: var(--bronze-light);
+  font-size: 0.875rem;
+  display: inline-block;
+  margin-left: 0.5rem;
+}
 .band--blue .pullquote {
   color: var(--bronze-light);
   font-style: italic;
+  font-size: 1.125rem;
+  margin-top: 1.5rem;
 }
 .band--blue .recognition li {
-  border-bottom-color: rgba(237, 233, 225, 0.1);
+  border-bottom-color: rgba(237, 233, 225, 0.2);
 }

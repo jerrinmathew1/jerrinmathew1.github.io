@@ -197,6 +197,7 @@ a:hover { color: var(--bronze); }
   overflow: hidden;
   cursor: pointer;
   height: 100%;
+  min-height: 320px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;

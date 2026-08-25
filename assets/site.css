@@ -193,7 +193,7 @@ a:hover { color: var(--bronze); }
 .pricing-card {
   border: 1px solid var(--rule);
   transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
-  background: linear-gradient(135deg, #FBF8F3 0%, white 100%);
+  background: linear-gradient(135deg, rgba(232, 169, 160, 0.15) 0%, rgba(248,248,243,0.8) 100%);
   position: relative;
   overflow: hidden;
 }
@@ -210,17 +210,17 @@ a:hover { color: var(--bronze); }
   transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
 .pricing-card.is-featured {
-  background: linear-gradient(135deg, #9A7548 0%, #D4A574 100%);
+  background: linear-gradient(135deg, #D4A574 0%, #C9955F 100%);
   border-color: var(--bronze);
-  color: white;
+  color: #1A1C1E;
 }
 .pricing-card.is-featured h3,
 .pricing-card.is-featured .price,
 .pricing-card.is-featured .duration {
-  color: white;
+  color: #1A1C1E;
 }
 .pricing-card.is-featured p {
-  color: rgba(255, 255, 255, 0.95);
+  color: rgba(26, 28, 30, 0.9);
 }
 .pricing-card.is-featured::before {
   background: var(--bronze);

@@ -189,18 +189,20 @@ a:hover { color: var(--bronze); }
   border-radius: 4px;
 }
 
-/* Pricing cards with warm accents */
+/* Pricing cards - white default, navy on hover */
 .pricing-card {
   border-top: 3px solid transparent;
-  transition: all 0.25s;
+  transition: all 0.3s;
+  background: white;
 }
 .pricing-card:hover {
-  border-top-color: var(--bronze);
-  background: var(--warm-bg);
+  border-top-color: var(--navy);
+  background: linear-gradient(135deg, rgba(23, 41, 63, 0.02) 0%, white 100%);
+  box-shadow: 0 6px 16px rgba(23, 41, 63, 0.12);
 }
 .pricing-card.is-featured {
   border-top-color: var(--bronze);
-  background: linear-gradient(135deg, var(--warm-bg) 0%, rgba(232, 169, 160, 0.05) 100%);
+  background: white;
 }
 
 /* Warm highlight for important text */

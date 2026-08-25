@@ -597,3 +597,32 @@ html {
   transform: translateY(-3px) scale(1.05);
   box-shadow: 0 12px 28px rgba(154, 117, 72, 0.25);
 }
+
+
+/* REAL TALK SECTION - NAVY BLUE */
+.band--blue {
+  background: var(--navy);
+  color: white;
+}
+.band--blue .eyebrow {
+  color: var(--bronze-light);
+}
+.band--blue h2 {
+  color: white;
+}
+.band--blue .recognition a {
+  color: #EDE9E1;
+}
+.band--blue .recognition a:hover {
+  color: var(--bronze-light);
+}
+.band--blue .recognition a::after {
+  background: var(--bronze-light);
+}
+.band--blue .pullquote {
+  color: var(--bronze-light);
+  font-style: italic;
+}
+.band--blue .recognition li {
+  border-bottom-color: rgba(237, 233, 225, 0.1);
+}

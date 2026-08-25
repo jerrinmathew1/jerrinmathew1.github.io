@@ -189,20 +189,26 @@ a:hover { color: var(--bronze); }
   border-radius: 4px;
 }
 
-/* Pricing cards - white default, navy on hover */
+/* Pricing cards - uniform white, navy hover */
 .pricing-card {
   border-top: 3px solid transparent;
-  transition: all 0.3s;
+  transition: all 0.3s ease;
   background: white;
-}
-.pricing-card:hover {
-  border-top-color: var(--navy);
-  background: linear-gradient(135deg, rgba(23, 41, 63, 0.02) 0%, white 100%);
-  box-shadow: 0 6px 16px rgba(23, 41, 63, 0.12);
+  border: 1px solid var(--rule);
 }
 .pricing-card.is-featured {
   border-top-color: var(--bronze);
+  border: 1px solid var(--rule);
+}
+.pricing-card:hover {
+  border-top-color: var(--navy);
+  border-color: var(--navy);
   background: white;
+  box-shadow: 0 8px 20px rgba(23, 41, 63, 0.15);
+  transform: translateY(-2px);
+}
+.pricing-card:hover.is-featured {
+  border-top-color: var(--navy);
 }
 
 /* Warm highlight for important text */
@@ -266,3 +272,13 @@ a:hover { color: var(--bronze); }
 /* Signature */
 .article-signature { margin-top: 3rem; padding-top: 2rem; border-top: 1px solid var(--rule); }
 .article-signature svg { width: 180px; height: auto; display: block; margin-bottom: 1.5rem; }
+
+/* Pricing card links */
+a[href^="pricing/"] {
+  color: inherit;
+  text-decoration: none;
+  cursor: pointer;
+}
+a[href^="pricing/"] .pricing-card {
+  cursor: pointer;
+}

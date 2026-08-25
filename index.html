@@ -21,7 +21,7 @@
 <a class="skip" href="#main">Skip to content</a>
 <header class="wrap">
   <div class="masthead">
-    <a class="mark" href="index.html">Jerrin Mathew<span>RN, BSN</span></a>
+    <a class="mark" href="index.html"><img src="assets/jm-mark.svg" alt="JM" class="mark-icon"><span>Jerrin Mathew</span></a>
     <nav aria-label="Sections">
       <a href="index.html#focus">Areas of focus</a>
       <a href="about.html">About</a>
@@ -271,31 +271,42 @@
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "HealthAndBeautyBusiness",
-  "name": "Jerrin Mathew, RN, BSN - Psychiatric-Mental Health Nursing",
+  "@type": "MedicalBusiness",
+  "@id": "https://jerrinmathew.com",
+  "name": "Jerrin Mathew - Psychiatric-Mental Health Nursing",
   "url": "https://jerrinmathew.com",
   "email": "hello@jerrinmathew.com",
-  "description": "Psychiatric evaluation and medication management for working professionals in Chicago and surrounding areas.",
-  "areaServed": {
-    "@type": "GeoShape",
-    "name": "Chicago Metropolitan Area, Illinois"
-  },
-  "knowsAbout": [
-    "ADHD",
-    "Depression",
-    "Bipolar Disorder",
-    "Anxiety Disorders",
-    "Panic Disorder",
-    "Substance Use Disorder",
-    "PTSD",
-    "Psychiatric Medication Management",
-    "Psychotic Disorders"
+  "description": "PMHNP student in Chicago offering psychiatric evaluation and medication management for working professionals.",
+  "areaServed": [
+    {
+      "@type": "GeoShape",
+      "name": "Chicago, Illinois"
+    },
+    {
+      "@type": "GeoShape", 
+      "name": "Cook County, Illinois"
+    },
+    {
+      "@type": "GeoShape",
+      "name": "Chicago Metropolitan Area"
+    }
   ],
-  "medicalSpecialty": "Psychiatry",
-  "jobTitle": "Psychiatric-Mental Health Nurse Practitioner Student",
-  "sameAs": [
-    "https://jerrinmathew.com"
-  ]
+  "medicalSpecialty": ["Psychiatry", "Mental Health"],
+  "knowsAbout": ["ADHD", "Depression", "Bipolar Disorder", "Anxiety Disorders", "Panic Disorder", "Substance Use Disorder", "PTSD", "Psychotic Disorders", "Psychiatric Medication Management"],
+  "priceRange": "$95-$225",
+  "makesOffer": {
+    "@type": "Offer",
+    "availability": "ByAppointment",
+    "priceCurrency": "USD",
+    "price": "225",
+    "pricingDetails": "Starting at $225 for initial psychiatric evaluation"
+  },
+  "founder": {
+    "@type": "Person",
+    "name": "Jerrin Mathew",
+    "jobTitle": "Registered Nurse, Psychiatric-Mental Health Nurse Practitioner Student",
+    "knowsAbout": ["ICU Psychiatry", "Trauma Recovery", "Psychiatric Nursing"]
+  }
 }
 </script>
 </body>

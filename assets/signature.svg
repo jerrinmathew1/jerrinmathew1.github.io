@@ -1,0 +1,11 @@
+<svg viewBox="0 0 200 80" xmlns="http://www.w3.org/2000/svg" class="signature">
+  <defs>
+    <style>
+      .sig-name { font-family: Newsreader, serif; font-size: 28px; font-weight: 400; fill: #1A1C1E; }
+      .sig-line { stroke: #1A1C1E; stroke-width: 1; fill: none; }
+    </style>
+  </defs>
+  <line x1="0" y1="15" x2="140" y2="15" class="sig-line"/>
+  <text x="0" y="45" class="sig-name">Jerrin Mathew</text>
+  <text x="0" y="65" style="font-family: Inter, sans-serif; font-size: 11px; fill: #7C8B7A; font-weight: 500;">RN, BSN, PMHNP Student</text>
+</svg>

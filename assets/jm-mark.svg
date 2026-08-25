@@ -1,0 +1,10 @@
+<svg viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg" class="jm-mark">
+  <defs>
+    <style>
+      .jm-circle { fill: none; stroke: #17293F; stroke-width: 1.5; }
+      .jm-text { font-family: Newsreader, serif; font-size: 24px; font-weight: 500; fill: #17293F; letter-spacing: -1px; }
+    </style>
+  </defs>
+  <circle cx="30" cy="30" r="28" class="jm-circle"/>
+  <text x="30" y="38" text-anchor="middle" class="jm-text">JM</text>
+</svg>

@@ -154,7 +154,7 @@ a.card:hover{background:var(--paper)}
 .form-status.is-err{color:#E8A9A0}
 #signup-btn[disabled]{opacity:.6;cursor:default}
 
-/* Pricing section */
+/* BALANCED COLOR PALETTE - REBALANCED */
 .pricing-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1.5rem;margin-top:2.5rem}@media(max-width:600px){.pricing-grid{grid-template-columns:1fr}}
 .pricing-card{padding:2rem;border:1px solid var(--rule);background:var(--paper);transition:all .25s}
 .pricing-card.is-featured{border-color:var(--bronze);box-shadow:0 4px 12px rgba(154,117,72,.1)}

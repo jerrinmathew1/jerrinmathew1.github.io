@@ -102,7 +102,7 @@ footer .credential{font-family:var(--serif);font-size:1rem;color:var(--ink);marg
 .recognition li:first-child{padding-top:0}
 .recognition strong{color:var(--ink);font-weight:500}
 .pullquote{margin-top:2.75rem;font-family:var(--serif);font-size:clamp(1.5rem,3.2vw,2.1rem);line-height:1.3;color:var(--navy);max-width:16ch}
-.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(15rem,1fr));gap:1px;background:var(--rule);margin-top:3rem;border:1px solid var(--rule)}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--rule);margin-top:3rem;border:1px solid var(--rule)}@media(max-width:900px){.cards{grid-template-columns:repeat(2,1fr)}}@media(max-width:600px){.cards{grid-template-columns:1fr}}
 .card{background:var(--paper-warm);padding:2.25rem 1.75rem;display:block;text-decoration:none;color:inherit;transition:background .2s}
 a.card:hover{background:var(--paper)}
 .card h3{font-size:1.1875rem;margin-bottom:1rem;line-height:1.3}

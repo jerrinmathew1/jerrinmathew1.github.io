@@ -1,0 +1,38 @@
+<svg viewBox="0 0 500 200" xmlns="http://www.w3.org/2000/svg" class="diagram">
+  <defs>
+    <style>
+      .timeline-line { stroke: #17293F; stroke-width: 2; fill: none; }
+      .timeline-dot { fill: #17293F; }
+      .timeline-label { font-family: Inter, sans-serif; font-size: 12px; fill: #1A1C1E; font-weight: 500; }
+      .timeline-sublabel { font-family: Inter, sans-serif; font-size: 11px; fill: #7C8B7A; }
+    </style>
+  </defs>
+  
+  <text x="250" y="25" text-anchor="middle" class="timeline-label" font-size="14" font-weight="600">ICU Survivor Recovery Timeline</text>
+  
+  <!-- Main timeline -->
+  <line x1="40" y1="60" x2="470" y2="60" class="timeline-line"/>
+  
+  <!-- Phase dots and labels -->
+  <circle cx="60" cy="60" r="5" class="timeline-dot"/>
+  <text x="60" y="85" text-anchor="middle" class="timeline-label">Discharge</text>
+  <text x="60" y="100" text-anchor="middle" class="timeline-sublabel">Week 1</text>
+  
+  <circle cx="150" cy="60" r="5" class="timeline-dot"/>
+  <text x="150" y="85" text-anchor="middle" class="timeline-label">Physical</text>
+  <text x="150" y="100" text-anchor="middle" class="timeline-label">recovery</text>
+  <text x="150" y="115" text-anchor="middle" class="timeline-sublabel">Weeks 2–4</text>
+  
+  <circle cx="270" cy="60" r="5" class="timeline-dot"/>
+  <text x="270" y="85" text-anchor="middle" class="timeline-label">Cognitive</text>
+  <text x="270" y="100" text-anchor="middle" class="timeline-label">improvement</text>
+  <text x="270" y="115" text-anchor="middle" class="timeline-sublabel">Months 2–6</text>
+  
+  <circle cx="390" cy="60" r="5" class="timeline-dot"/>
+  <text x="390" y="85" text-anchor="middle" class="timeline-label">Full recovery</text>
+  <text x="390" y="100" text-anchor="middle" class="timeline-label">or plateau</text>
+  <text x="390" y="115" text-anchor="middle" class="timeline-sublabel">Months 6–12+</text>
+  
+  <!-- Note -->
+  <text x="250" y="160" text-anchor="middle" class="timeline-sublabel" font-size="11">Recovery is not linear. Cognitive symptoms often lag behind physical recovery by months.</text>
+</svg>

@@ -1,0 +1,42 @@
+<svg viewBox="0 0 400 320" xmlns="http://www.w3.org/2000/svg" class="diagram">
+  <defs>
+    <style>
+      .diagram-label { font-family: Inter, sans-serif; font-size: 13px; fill: #1A1C1E; font-weight: 500; }
+      .diagram-arrow { stroke: #17293F; stroke-width: 2; fill: none; marker-end: url(#arrowhead); }
+      .diagram-circle { stroke: #17293F; stroke-width: 2; fill: #F7F5F0; }
+      .diagram-center { fill: #17293F; }
+    </style>
+    <marker id="arrowhead" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <polygon points="0 0, 10 3, 0 6" fill="#17293F"/>
+    </marker>
+  </defs>
+  <text x="200" y="30" text-anchor="middle" class="diagram-label" font-weight="600">The Anxiety Cycle</text>
+  
+  <!-- Four circles -->
+  <circle cx="200" cy="90" r="35" class="diagram-circle"/>
+  <circle cx="320" cy="170" r="35" class="diagram-circle"/>
+  <circle cx="200" cy="250" r="35" class="diagram-circle"/>
+  <circle cx="80" cy="170" r="35" class="diagram-circle"/>
+  
+  <!-- Labels -->
+  <text x="200" y="95" text-anchor="middle" class="diagram-label">Trigger or</text>
+  <text x="200" y="110" text-anchor="middle" class="diagram-label">worry</text>
+  
+  <text x="320" y="175" text-anchor="middle" class="diagram-label">Physical</text>
+  <text x="320" y="190" text-anchor="middle" class="diagram-label">symptoms</text>
+  
+  <text x="200" y="255" text-anchor="middle" class="diagram-label">Avoidance</text>
+  <text x="200" y="270" text-anchor="middle" class="diagram-label">or escape</text>
+  
+  <text x="80" y="175" text-anchor="middle" class="diagram-label">Anxiety</text>
+  <text x="80" y="190" text-anchor="middle" class="diagram-label">escalates</text>
+  
+  <!-- Arrows connecting circles -->
+  <path d="M 230 110 L 290 150" class="diagram-arrow"/>
+  <path d="M 310 205 L 230 230" class="diagram-arrow"/>
+  <path d="M 170 240 L 110 200" class="diagram-arrow"/>
+  <path d="M 90 135 L 170 105" class="diagram-arrow"/>
+  
+  <!-- Center annotation -->
+  <text x="200" y="310" text-anchor="middle" class="diagram-label" font-size="12" fill="#7C8B7A">Each cycle strengthens the pattern. Avoidance prevents disconfirmation.</text>
+</svg>

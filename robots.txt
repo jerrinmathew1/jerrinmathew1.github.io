@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Disallow: /assets/
+Disallow: *.pdf
+
+Sitemap: https://jerrinmathew.com/sitemap.xml

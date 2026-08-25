@@ -1,0 +1,38 @@
+<svg viewBox="0 0 450 250" xmlns="http://www.w3.org/2000/svg" class="diagram">
+  <defs>
+    <style>
+      .perf-label { font-family: Inter, sans-serif; font-size: 12px; fill: #1A1C1E; font-weight: 500; }
+      .perf-arrow { stroke: #9A7548; stroke-width: 2; fill: none; marker-end: url(#arrowhead-perf); }
+      .perf-circle { stroke: #9A7548; stroke-width: 2; fill: #F7F5F0; }
+      .perf-note { font-family: Inter, sans-serif; font-size: 11px; fill: #7C8B7A; }
+    </style>
+    <marker id="arrowhead-perf" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <polygon points="0 0, 10 3, 0 6" fill="#9A7548"/>
+    </marker>
+  </defs>
+  
+  <text x="225" y="25" text-anchor="middle" class="perf-label" font-size="14" font-weight="600">The Perfectionism Cycle</text>
+  
+  <!-- Three circles -->
+  <circle cx="225" cy="80" r="40" class="perf-circle"/>
+  <circle cx="340" cy="150" r="40" class="perf-circle"/>
+  <circle cx="110" cy="150" r="40" class="perf-circle"/>
+  
+  <!-- Labels -->
+  <text x="225" y="80" text-anchor="middle" class="perf-label" font-size="13">High</text>
+  <text x="225" y="97" text-anchor="middle" class="perf-label" font-size="13">standards</text>
+  
+  <text x="340" y="145" text-anchor="middle" class="perf-label" font-size="12">Exhaustion</text>
+  <text x="340" y="162" text-anchor="middle" class="perf-label" font-size="12">more hours</text>
+  
+  <text x="110" y="145" text-anchor="middle" class="perf-label" font-size="12">Imperfect</text>
+  <text x="110" y="162" text-anchor="middle" class="perf-label" font-size="12">work triggers</text>
+  
+  <!-- Arrows -->
+  <path d="M 250 110 L 320 130" class="perf-arrow"/>
+  <path d="M 310 180 L 150 170" class="perf-arrow"/>
+  <path d="M 140 130 L 210 100" class="perf-arrow"/>
+  
+  <!-- Annotation -->
+  <text x="225" y="235" text-anchor="middle" class="perf-note">Standards never flex. The gap persists. Exhaustion replaces joy.</text>
+</svg>

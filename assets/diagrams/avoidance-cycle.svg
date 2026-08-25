@@ -1,0 +1,43 @@
+<svg viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg" class="diagram">
+  <defs>
+    <style>
+      .cycle-label { font-family: Inter, sans-serif; font-size: 12px; fill: #1A1C1E; font-weight: 500; }
+      .cycle-arrow { stroke: #17293F; stroke-width: 2.5; fill: none; marker-end: url(#arrowhead-cycle); }
+      .cycle-box { stroke: #17293F; stroke-width: 2; fill: #F7F5F0; }
+      .cycle-note { font-family: Inter, sans-serif; font-size: 11px; fill: #7C8B7A; }
+    </style>
+    <marker id="arrowhead-cycle" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <polygon points="0 0, 10 3, 0 6" fill="#17293F"/>
+    </marker>
+  </defs>
+  
+  <text x="200" y="25" text-anchor="middle" class="cycle-label" font-size="14" font-weight="600">How Avoidance Strengthens Anxiety</text>
+  
+  <!-- Four boxes -->
+  <rect x="140" y="60" width="120" height="50" rx="4" class="cycle-box"/>
+  <rect x="280" y="125" width="100" height="50" rx="4" class="cycle-box"/>
+  <rect x="140" y="190" width="120" height="50" rx="4" class="cycle-box"/>
+  <rect x="20" y="125" width="100" height="50" rx="4" class="cycle-box"/>
+  
+  <!-- Labels in boxes -->
+  <text x="200" y="90" text-anchor="middle" class="cycle-label">Feared</text>
+  <text x="200" y="105" text-anchor="middle" class="cycle-label">situation</text>
+  
+  <text x="330" y="150" text-anchor="middle" class="cycle-label">Avoidance</text>
+  <text x="330" y="167" text-anchor="middle" class="cycle-label">or escape</text>
+  
+  <text x="200" y="220" text-anchor="middle" class="cycle-label">Prediction</text>
+  <text x="200" y="237" text-anchor="middle" class="cycle-label">untested</text>
+  
+  <text x="70" y="150" text-anchor="middle" class="cycle-label">Anxiety</text>
+  <text x="70" y="167" text-anchor="middle" class="cycle-label">increases</text>
+  
+  <!-- Arrows -->
+  <path d="M 200 110 L 280 140" class="cycle-arrow"/>
+  <path d="M 330 175 L 230 190" class="cycle-arrow"/>
+  <path d="M 140 215 L 100 160" class="cycle-arrow"/>
+  <path d="M 70 125 L 170 100" class="cycle-arrow"/>
+  
+  <!-- Annotation -->
+  <text x="200" y="280" text-anchor="middle" class="cycle-note">Relief from avoidance reinforces the cycle. The feared prediction never gets disconfirmed.</text>
+</svg>

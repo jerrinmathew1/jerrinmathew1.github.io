@@ -189,11 +189,11 @@ a:hover { color: var(--bronze); }
   border-radius: 4px;
 }
 
-/* Pricing cards - WARM uniform bronze, richer on hover */
+/* Pricing cards - WARM bronze, NO BLUE */
 .pricing-card {
-  border: 2px solid rgba(154, 117, 72, 0.3);
+  border: 2px solid rgba(154, 117, 72, 0.25);
   transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
-  background: linear-gradient(135deg, rgba(212, 165, 116, 0.25) 0%, rgba(212, 165, 116, 0.08) 100%);
+  background: linear-gradient(135deg, rgba(212, 165, 116, 0.22) 0%, rgba(212, 165, 116, 0.06) 100%);
   position: relative;
   overflow: hidden;
   cursor: pointer;
@@ -213,37 +213,26 @@ a:hover { color: var(--bronze); }
 .pricing-card:hover::before {
   transform: scaleX(1);
 }
-.pricing-card.is-featured {
-  background: linear-gradient(135deg, rgba(212, 165, 116, 0.25) 0%, rgba(212, 165, 116, 0.08) 100%);
-  border-color: rgba(154, 117, 72, 0.3);
-}
 .pricing-card h3 {
-  transition: color 0.3s;
-  color: var(--navy);
+  color: var(--ink);
+  font-weight: 500;
 }
 .pricing-card .price {
-  transition: color 0.3s, transform 0.3s;
   color: var(--bronze-dark);
-  font-size: 1.75rem;
-  font-weight: 300;
+  font-size: 2rem;
+  font-weight: 400;
 }
 .pricing-card:hover {
-  background: linear-gradient(135deg, rgba(154, 117, 72, 0.3) 0%, rgba(212, 165, 116, 0.2) 100%);
-  border-color: var(--bronze-dark);
-  box-shadow: 0 12px 32px rgba(154, 117, 72, 0.18), inset 0 1px 0 rgba(255, 255, 255, 0.4);
+  background: linear-gradient(135deg, rgba(212, 165, 116, 0.28) 0%, rgba(212, 165, 116, 0.14) 100%);
+  border-color: var(--bronze);
+  box-shadow: 0 16px 40px rgba(154, 117, 72, 0.16);
   transform: translateY(-6px);
 }
-.pricing-card:hover h3,
-.pricing-card:hover .price {
+.pricing-card:hover h3 {
   color: var(--bronze-dark);
 }
-.pricing-card:hover .duration,
-.pricing-card:hover p {
-  color: var(--ink);
-}
-.pricing-card.is-featured:hover {
-  background: linear-gradient(135deg, rgba(154, 117, 72, 0.3) 0%, rgba(212, 165, 116, 0.2) 100%);
-  border-color: var(--bronze-dark);
+.pricing-card:hover .price {
+  color: var(--bronze);
 }
 
 
@@ -691,4 +680,25 @@ html {
 /* Enhanced form input interactivity */
 input:focus, textarea:focus {
   box-shadow: 0 0 0 4px rgba(154, 117, 72, 0.15);
+}
+
+
+/* Real Talk section - hover effect on items */
+.band--blue .recognition li {
+  transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+.band--blue .recognition li:hover {
+  transform: translateX(4px);
+}
+.band--blue .recognition li:hover a {
+  color: var(--bronze-light);
+}
+.band--blue .recognition li:hover a strong {
+  color: var(--bronze-light);
+}
+.band--blue .recognition li:hover a::after {
+  background: var(--bronze-light);
+}
+.band--blue .recognition li:hover .go {
+  color: #FFD700;
 }

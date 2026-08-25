@@ -164,6 +164,99 @@ a.card:hover{background:var(--paper)}
 .pricing-card p{font-size:.9375rem;line-height:1.6;color:var(--ink-soft)}
 .pricing-card:hover{border-color:var(--navy);background:rgba(23,41,63,.02)}
 
+
+/* Warm section backgrounds for visual warmth */
+.band--warm { background: var(--warm-bg); }
+.card { transition: all 0.25s; }
+.card:hover { 
+  background: var(--warm-bg);
+  border-color: var(--bronze);
+}
+
+/* Warm accents for links and interactive elements */
+a { color: var(--navy); transition: all 0.2s; }
+a:hover { color: var(--bronze); }
+.quiet-link:hover { color: var(--bronze-dark); }
+
+/* Warm accent lines */
+.accent-line { height: 3px; background: linear-gradient(90deg, var(--bronze) 0%, var(--bronze-light) 100%); }
+
+/* Warm tinted boxes */
+.warm-box {
+  background: var(--warm-bg);
+  border-left: 4px solid var(--bronze);
+  padding: 1.5rem;
+  border-radius: 4px;
+}
+
+/* Pricing cards with warm accents */
+.pricing-card {
+  border-top: 3px solid transparent;
+  transition: all 0.25s;
+}
+.pricing-card:hover {
+  border-top-color: var(--bronze);
+  background: var(--warm-bg);
+}
+.pricing-card.is-featured {
+  border-top-color: var(--bronze);
+  background: linear-gradient(135deg, var(--warm-bg) 0%, rgba(232, 169, 160, 0.05) 100%);
+}
+
+/* Warm highlight for important text */
+.warm-highlight {
+  color: var(--bronze-dark);
+  font-weight: 500;
+}
+
+/* Card accent top border */
+.card {
+  border-top: 3px solid transparent;
+}
+.card:nth-child(odd) {
+  border-top-color: var(--bronze);
+}
+.card:nth-child(even) {
+  border-top-color: var(--bronze-light);
+}
+
+/* Eyebrow warm accent */
+.eyebrow {
+  color: var(--bronze-dark);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 0.75rem;
+}
+
+/* Warm button states */
+.btn {
+  transition: all 0.3s;
+  background: var(--navy);
+  color: white;
+}
+.btn:hover {
+  background: var(--bronze-dark);
+  box-shadow: 0 4px 12px rgba(122, 92, 60, 0.2);
+}
+
+/* Warm accent for article context paragraph */
+.article-context {
+  border-left: 4px solid var(--bronze);
+  background: linear-gradient(90deg, rgba(232, 169, 160, 0.08) 0%, transparent 100%);
+  padding: 1rem 1.5rem;
+  margin: 1.5rem 0;
+}
+
+/* Recognition links with warm hover */
+.recognition a {
+  transition: all 0.2s;
+  border-bottom: 2px solid transparent;
+}
+.recognition a:hover {
+  color: var(--bronze-dark);
+  border-bottom-color: var(--bronze-light);
+}
 /* JM Mark Icon */
 .mark-icon { width: 32px; height: 32px; display: inline-block; margin-right: 0.5rem; vertical-align: middle; }
 .mark { display: flex; align-items: center; font-size: 1.125rem; font-weight: 500; }

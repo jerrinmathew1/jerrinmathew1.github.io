@@ -1,0 +1,11 @@
+<svg viewBox="0 0 128 128" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <style>
+      .favicon-bg { fill: #F7F5F0; }
+      .favicon-text { font-family: Newsreader, Georgia, serif; font-size: 64px; font-weight: 600; fill: #17293F; letter-spacing: -2px; }
+    </style>
+  </defs>
+  <rect width="128" height="128" class="favicon-bg"/>
+  <rect width="128" height="128" fill="none" stroke="#17293F" stroke-width="2"/>
+  <text x="64" y="88" text-anchor="middle" class="favicon-text">JM</text>
+</svg>

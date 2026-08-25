@@ -189,13 +189,14 @@ a:hover { color: var(--bronze); }
   border-radius: 4px;
 }
 
-/* Pricing cards - COLORFUL and INTERACTIVE */
+/* Pricing cards - ALL UNIFORM subtle bronze, warm on hover */
 .pricing-card {
-  border: 1px solid var(--rule);
+  border: 2px solid rgba(154, 117, 72, 0.2);
   transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
-  background: linear-gradient(135deg, rgba(232, 169, 160, 0.15) 0%, rgba(248,248,243,0.8) 100%);
+  background: linear-gradient(135deg, rgba(212, 165, 116, 0.1) 0%, rgba(248,248,243,0.6) 100%);
   position: relative;
   overflow: hidden;
+  cursor: pointer;
 }
 .pricing-card::before {
   content: '';
@@ -203,48 +204,45 @@ a:hover { color: var(--bronze); }
   top: 0;
   left: 0;
   right: 0;
-  height: 4px;
-  background: var(--bronze);
+  height: 3px;
+  background: linear-gradient(90deg, var(--bronze) 0%, var(--bronze-light) 100%);
   transform: scaleX(0);
   transform-origin: left;
   transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
-.pricing-card.is-featured {
-  background: linear-gradient(135deg, #D4A574 0%, #C9955F 100%);
-  border-color: var(--bronze);
-  color: #1A1C1E;
-}
-.pricing-card.is-featured h3,
-.pricing-card.is-featured .price,
-.pricing-card.is-featured .duration {
-  color: #1A1C1E;
-}
-.pricing-card.is-featured p {
-  color: rgba(26, 28, 30, 0.9);
-}
-.pricing-card.is-featured::before {
-  background: var(--bronze);
-}
-.pricing-card:hover {
-  background: linear-gradient(135deg, var(--bronze) 0%, rgba(232, 169, 160, 0.4) 100%);
-  border-color: var(--bronze);
-  color: white;
-  box-shadow: 0 12px 32px rgba(154, 117, 72, 0.2);
-  transform: translateY(-6px);
-}
 .pricing-card:hover::before {
   transform: scaleX(1);
 }
+.pricing-card.is-featured {
+  background: linear-gradient(135deg, rgba(212, 165, 116, 0.1) 0%, rgba(248,248,243,0.6) 100%);
+  border-color: rgba(154, 117, 72, 0.2);
+}
+.pricing-card h3 {
+  transition: color 0.3s;
+}
+.pricing-card .price {
+  transition: color 0.3s, transform 0.3s;
+}
+.pricing-card:hover {
+  background: linear-gradient(135deg, rgba(154, 117, 72, 0.2) 0%, rgba(212, 165, 116, 0.15) 100%);
+  border-color: var(--bronze);
+  box-shadow: 0 12px 32px rgba(154, 117, 72, 0.18), inset 0 1px 0 rgba(255, 255, 255, 0.4);
+  transform: translateY(-6px);
+}
 .pricing-card:hover h3,
 .pricing-card:hover .price {
-  color: white;
+  color: var(--bronze-dark);
 }
+.pricing-card:hover .duration,
 .pricing-card:hover p {
-  color: rgba(255, 255, 255, 0.95);
+  color: var(--ink);
 }
 .pricing-card.is-featured:hover {
-  background: linear-gradient(135deg, var(--bronze) 0%, rgba(232, 169, 160, 0.5) 100%);
+  background: linear-gradient(135deg, rgba(154, 117, 72, 0.2) 0%, rgba(212, 165, 116, 0.15) 100%);
+  border-color: var(--bronze);
 }
+
+
 
 /* Warm highlight for important text */
 .warm-highlight {
@@ -647,4 +645,45 @@ html {
 }
 .band--blue .recognition li {
   border-bottom-color: rgba(237, 233, 225, 0.2);
+}
+
+
+/* Enhanced interactivity for all interactive elements */
+.card {
+  position: relative;
+}
+.card::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, var(--bronze) 0%, transparent 100%);
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+.card:hover::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+/* Add subtle glow on hover for pricing cards */
+.pricing-card:hover {
+  box-shadow: 0 12px 32px rgba(154, 117, 72, 0.18), inset 0 1px 0 rgba(255, 255, 255, 0.4);
+}
+
+/* Make buttons more interactive */
+.btn {
+  box-shadow: 0 4px 12px rgba(23, 41, 63, 0.1);
+  letter-spacing: 0.02em;
+}
+.btn:hover {
+  box-shadow: 0 12px 28px rgba(23, 41, 63, 0.2);
+}
+
+/* Enhanced form input interactivity */
+input:focus, textarea:focus {
+  box-shadow: 0 0 0 4px rgba(154, 117, 72, 0.15);
 }

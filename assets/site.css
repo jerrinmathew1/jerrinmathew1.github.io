@@ -153,3 +153,13 @@ a.card:hover{background:var(--paper)}
 .form-status.is-ok{color:#B99A6E}
 .form-status.is-err{color:#E8A9A0}
 #signup-btn[disabled]{opacity:.6;cursor:default}
+
+/* Pricing section */
+.pricing-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1.5rem;margin-top:2.5rem}
+.pricing-card{padding:2rem;border:1px solid var(--rule);background:var(--paper);transition:all .25s}
+.pricing-card.is-featured{border-color:var(--bronze);box-shadow:0 4px 12px rgba(154,117,72,.1)}
+.pricing-card h3{font-size:1.0625rem;margin-bottom:.5rem;font-weight:500}
+.pricing-card .price{font-size:1.875rem;font-weight:300;color:var(--navy);margin:.5rem 0}
+.pricing-card .duration{font-size:.875rem;color:var(--ink-soft);font-style:italic;margin-bottom:1rem}
+.pricing-card p{font-size:.9375rem;line-height:1.6;color:var(--ink-soft)}
+.pricing-card:hover{border-color:var(--navy);background:rgba(23,41,63,.02)}

@@ -717,3 +717,25 @@ input:focus, textarea:focus {
 .band--blue .recognition li:hover .go {
   color: #FFD700;
 }
+
+
+/* Make steps clickable */
+.step {
+  transition: all 0.3s;
+}
+a.step:hover {
+  transform: translateX(4px);
+  opacity: 0.9;
+}
+a.step:hover h3 {
+  color: var(--bronze-dark);
+}
+
+/* Lede links */
+.lede a {
+  font-weight: 600;
+  color: var(--navy);
+}
+.lede a::after {
+  background: var(--navy);
+}

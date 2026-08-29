@@ -749,3 +749,11 @@ a.step:hover h3 {
 .lede a::after {
   background: var(--navy);
 }
+
+/* ---- Statutory status banner (Illinois Nurse Practice Act, 225 ILCS 65) ---- */
+.status-banner{background:var(--navy-dark,#0F1A25);color:#F7F5F0;padding:.7rem 1.25rem;
+  font-family:var(--sans);font-size:.8125rem;line-height:1.5;text-align:center;
+  border-bottom:2px solid var(--bronze,#9A7548)}
+.status-banner strong{color:var(--bronze-light,#D4A574);font-weight:600}
+.status-banner a{color:#F7F5F0;text-decoration:underline}
+@media(max-width:600px){.status-banner{font-size:.75rem;padding:.6rem .9rem;text-align:left}}

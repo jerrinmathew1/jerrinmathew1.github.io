@@ -173,14 +173,14 @@ a.card:hover{background:var(--paper)}
 
 /* Warm section backgrounds for visual warmth */
 .band--warm { background: var(--warm-bg); }
-.card { transition: all 0.25s; }
+.card { transition: opacity 0.25s, transform 0.25s, background-color 0.25s, border-color 0.25s, box-shadow 0.25s; }
 .card:hover { 
   background: var(--warm-bg);
   border-color: var(--bronze);
 }
 
 /* Warm accents for links and interactive elements */
-a { color: var(--navy); transition: all 0.2s; }
+a { color: var(--navy); transition: opacity 0.2s, transform 0.2s, background-color 0.2s, border-color 0.2s, box-shadow 0.2s; }
 a:hover { color: var(--bronze); }
 .quiet-link:hover { color: var(--bronze-dark); }
 
@@ -198,7 +198,7 @@ a:hover { color: var(--bronze); }
 /* Pricing cards - READABLE with light text */
 .pricing-card {
   border: 2px solid rgba(212, 165, 116, 0.4);
-  transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+  transition: opacity 0.4s cubic-bezier(0.34, 1.56, 0.64, 1), transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1), background-color 0.4s cubic-bezier(0.34, 1.56, 0.64, 1), border-color 0.4s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
   background: linear-gradient(135deg, rgba(60, 80, 100, 0.6) 0%, rgba(40, 60, 80, 0.4) 100%);
   position: relative;
   overflow: hidden;
@@ -293,7 +293,7 @@ a:hover { color: var(--bronze); }
 
 /* Warm button states */
 .btn {
-  transition: all 0.3s;
+  transition: opacity 0.3s, transform 0.3s, background-color 0.3s, border-color 0.3s, box-shadow 0.3s;
   background: var(--navy);
   color: white;
 }
@@ -312,7 +312,7 @@ a:hover { color: var(--bronze); }
 
 /* Recognition links with warm hover */
 .recognition a {
-  transition: all 0.2s;
+  transition: opacity 0.2s, transform 0.2s, background-color 0.2s, border-color 0.2s, box-shadow 0.2s;
   border-bottom: 2px solid transparent;
 }
 .recognition a:hover {
@@ -397,7 +397,7 @@ body::before {
 
 /* 3. DRAMATIC BUTTON HOVER - Scale & shadow */
 .btn {
-  transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+  transition: opacity 0.3s cubic-bezier(0.34, 1.56, 0.64, 1), transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1), background-color 0.3s cubic-bezier(0.34, 1.56, 0.64, 1), border-color 0.3s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
   position: relative;
   z-index: 2;
 }
@@ -431,7 +431,7 @@ a:hover::after {
 /* 5. ENHANCED CARD SHADOWS */
 .card {
   box-shadow: 0 2px 8px rgba(26, 28, 30, 0.06);
-  transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+  transition: opacity 0.4s cubic-bezier(0.34, 1.56, 0.64, 1), transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1), background-color 0.4s cubic-bezier(0.34, 1.56, 0.64, 1), border-color 0.4s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
 .card:hover {
   box-shadow: 0 16px 40px rgba(23, 41, 63, 0.15);
@@ -502,14 +502,26 @@ a:hover::after {
 }
 
 /* 10. SCROLL ANIMATION SUPPORT */
-.fade-in {
+/* Content is visible by default. Only hide for the animation if JS is
+   actually running (html.js is set by an inline script in <head>), so a
+   JS failure or slow connection can never leave the page blank. */
+.fade-in { opacity: 1; transform: none; }
+.js .fade-in {
   opacity: 0;
-  transform: translateY(20px);
-  transition: opacity 0.6s ease, transform 0.6s ease;
+  transform: translateY(14px);
+  transition: opacity .35s ease-out, transform .35s ease-out;
 }
-.fade-in.visible {
-  opacity: 1;
-  transform: translateY(0);
+.js .fade-in.visible { opacity: 1; transform: translateY(0); }
+
+/* Respect the OS reduced-motion setting: no animation, nothing hidden. */
+@media (prefers-reduced-motion: reduce) {
+  .js .fade-in { opacity: 1; transform: none; transition: none; }
+  *, *::before, *::after {
+    animation-duration: .01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: .01ms !important;
+    scroll-behavior: auto !important;
+  }
 }
 
 .count-up {
@@ -549,7 +561,7 @@ a:hover::after {
 
 .quiet-link {
   color: var(--bronze-dark);
-  transition: all 0.3s;
+  transition: opacity 0.3s, transform 0.3s, background-color 0.3s, border-color 0.3s, box-shadow 0.3s;
 }
 .quiet-link:hover {
   color: var(--navy);
@@ -567,7 +579,7 @@ section {
 
 /* 14. FORM IMPROVEMENTS */
 input, textarea {
-  transition: all 0.3s;
+  transition: opacity 0.3s, transform 0.3s, background-color 0.3s, border-color 0.3s, box-shadow 0.3s;
   border: 1px solid var(--rule);
 }
 input:focus, textarea:focus {
@@ -589,7 +601,7 @@ html {
   border-radius: 4px;
   padding: 2.5rem;
   margin: 3rem 0;
-  transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+  transition: opacity 0.4s cubic-bezier(0.34, 1.56, 0.64, 1), transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1), background-color 0.4s cubic-bezier(0.34, 1.56, 0.64, 1), border-color 0.4s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
 .featured-callout:hover {
   background: linear-gradient(135deg, rgba(23, 41, 63, 0.06) 0%, rgba(232, 169, 160, 0.12) 100%);
@@ -615,7 +627,7 @@ html {
   color: white;
   font-weight: 600;
   padding: 1rem 2rem;
-  transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+  transition: opacity 0.4s cubic-bezier(0.34, 1.56, 0.64, 1), transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1), background-color 0.4s cubic-bezier(0.34, 1.56, 0.64, 1), border-color 0.4s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
 .btn-secondary:hover {
   background: linear-gradient(135deg, var(--bronze-dark) 0%, var(--bronze) 100%);
@@ -710,7 +722,7 @@ input:focus, textarea:focus {
 
 /* Real Talk section - hover effect on items */
 .band--blue .recognition li {
-  transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+  transition: opacity 0.3s cubic-bezier(0.34, 1.56, 0.64, 1), transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1), background-color 0.3s cubic-bezier(0.34, 1.56, 0.64, 1), border-color 0.3s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
 .band--blue .recognition li:hover {
   transform: translateX(4px);
@@ -731,7 +743,7 @@ input:focus, textarea:focus {
 
 /* Make steps clickable */
 .step {
-  transition: all 0.3s;
+  transition: opacity 0.3s, transform 0.3s, background-color 0.3s, border-color 0.3s, box-shadow 0.3s;
 }
 a.step:hover {
   transform: translateX(4px);

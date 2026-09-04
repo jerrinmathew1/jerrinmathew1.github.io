@@ -59,7 +59,20 @@
     for (var i = 0; i < els.length; i++) obs.observe(els[i]);
   }
 
-  function boot() { init(); initCountUp(); }
+  function initCoursework() {
+    var btns = document.querySelectorAll('.coursework-toggle');
+    for (var i = 0; i < btns.length; i++) {
+      btns[i].addEventListener('click', function (e) {
+        e.preventDefault();
+        var open = this.getAttribute('aria-expanded') === 'true';
+        this.setAttribute('aria-expanded', open ? 'false' : 'true');
+        var panel = document.getElementById(this.getAttribute('aria-controls'));
+        if (panel) panel.hidden = open;
+      });
+    }
+  }
+
+  function boot() { init(); initCountUp(); initCoursework(); }
 
   if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', boot);

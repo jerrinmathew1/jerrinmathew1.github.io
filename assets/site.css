@@ -49,7 +49,7 @@ a{color:inherit}
 .entries{border-top:1px solid var(--rule);margin-top:3rem}
 .entry{display:block;text-decoration:none;padding:2rem 0;border-bottom:1px solid var(--rule);transition:padding-left .25s}
 .entry:hover{padding-left:.75rem}
-.entry h3{font-size:clamp(1.25rem,2.4vw,1.625rem);line-height:1.25;max-width:32ch;margin-bottom:.65rem}
+.entry h2,.entry h3{font-size:clamp(1.25rem,2.4vw,1.625rem);line-height:1.25;max-width:32ch;margin-bottom:.65rem}
 .entry p{font-size:.9375rem;color:var(--ink-soft);max-width:62ch}
 .entry .meta{display:block;font-size:.6875rem;letter-spacing:.14em;text-transform:uppercase;color:var(--bronze);margin-bottom:1rem}
 .article{max-width:38rem;margin:0 auto;padding-block:clamp(2rem,5vw,3rem) var(--band)}
@@ -818,3 +818,16 @@ a.step:hover h3 {
 .rm:not(.done):not(.current) p{opacity:.66}
 .rm.current h3{color:var(--bronze-dark,#7A5C3C)}
 @media(max-width:600px){.rm{padding-left:2.1rem}.roadmap::before{left:7px}}
+
+/* ---- Print ---- */
+@media print{
+  .status-banner,nav,.skip,footer .credential,.more,.go,
+  form,button,.coursework,.roadmap{display:none !important}
+  body{background:#fff;color:#000;font-size:11pt}
+  a{color:#000;text-decoration:underline}
+  a[href^="http"]::after{content:" (" attr(href) ")";font-size:9pt;color:#444}
+  .wrap{max-width:none;padding:0}
+  .band,.band--blue,.band--tint{background:#fff !important;color:#000 !important;padding:1rem 0}
+  h1,h2,h3{page-break-after:avoid}
+  .refs,.disclaimer{page-break-inside:avoid;border:1px solid #ccc;padding:.5rem}
+}

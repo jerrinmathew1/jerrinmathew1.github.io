@@ -831,3 +831,17 @@ a.step:hover h3 {
   h1,h2,h3{page-break-after:avoid}
   .refs,.disclaimer{page-break-inside:avoid;border:1px solid #ccc;padding:.5rem}
 }
+
+/* ---- Related reading (internal linking) ---- */
+.related{margin:3rem 0 0;padding:1.5rem 1.65rem;background:rgba(23,41,63,.04);
+  border-left:3px solid var(--sage,#7C8B7A);border-radius:0 4px 4px 0}
+.related h2{margin:0 0 .85rem;font-size:.75rem;letter-spacing:.12em;text-transform:uppercase;
+  color:var(--sage,#7C8B7A);font-weight:600}
+.related ul{margin:0;padding:0;list-style:none}
+.related li{margin:0 0 .6rem;line-height:1.45}
+.related li:last-child{margin-bottom:0}
+.related li a{font-family:var(--serif);font-size:1.0625rem;color:var(--navy);
+  text-decoration:none;border-bottom:1px solid rgba(154,117,72,.4)}
+.related li a:hover{border-bottom-color:var(--bronze)}
+.related-more{margin:1rem 0 0;font-size:.8125rem;color:var(--ink-soft)}
+.related-more a{color:var(--ink-soft);border-bottom:1px solid rgba(122,92,60,.3);text-decoration:none}

@@ -6,8 +6,13 @@
 @font-face{font-family:"Inter";font-style:normal;font-weight:500;font-display:swap;src:url("fonts/inter-500.woff2") format("woff2")}
 @font-face{font-family:"Inter";font-style:normal;font-weight:600;font-display:swap;src:url("fonts/inter-600.woff2") format("woff2")}
 :root{
-  --paper:#F7F5F0;--paper-warm:#EFEBE3;--ink:#1A1C1E;--ink-soft:#4A4F55;
-  --navy:#17293F;--sage:#7C8B7A;--bronze:#9A7548;--rule:#DCD6CA;
+  /* Warm stone base rather than off-white. Three tones, spaced far enough
+     apart that the section rhythm is actually visible. */
+  --paper:#F1ECE2;          /* base — warm stone, clearly not white */
+  --paper-warm:#E6DFD1;     /* alternating band — noticeably deeper */
+  --paper-deep:#DBD2C0;     /* occasional third tone for emphasis */
+  --ink:#1F2226;--ink-soft:#4E5359;
+  --navy:#17293F;--sage:#7C8B7A;--bronze:#9A7548;--rule:#CFC5B2;
   --serif:"Newsreader",Georgia,serif;
   --sans:"Inter",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
   --gutter:clamp(1.25rem,5vw,4.5rem);--band:clamp(3.5rem,7vw,6.5rem);
@@ -819,18 +824,7 @@ a.step:hover h3 {
 .rm.current h3{color:var(--bronze-dark,#7A5C3C)}
 @media(max-width:600px){.rm{padding-left:2.1rem}.roadmap::before{left:7px}}
 
-/* ---- Print ---- */
-@media print{
-  .status-banner,nav,.skip,footer .credential,.more,.go,
-  form,button,.coursework,.roadmap{display:none !important}
-  body{background:#fff;color:#000;font-size:11pt}
-  a{color:#000;text-decoration:underline}
-  a[href^="http"]::after{content:" (" attr(href) ")";font-size:9pt;color:#444}
-  .wrap{max-width:none;padding:0}
-  .band,.band--blue,.band--tint{background:#fff !important;color:#000 !important;padding:1rem 0}
-  h1,h2,h3{page-break-after:avoid}
-  .refs,.disclaimer{page-break-inside:avoid;border:1px solid #ccc;padding:.5rem}
-}
+
 
 /* ---- Related reading (internal linking) ---- */
 .related{margin:3rem 0 0;padding:1.5rem 1.65rem;background:rgba(23,41,63,.04);
@@ -878,3 +872,53 @@ a.step:hover h3 {
 /* ---- Second callout (get started) ---- */
 .callout-start{margin-top:1rem;background:linear-gradient(135deg,rgba(23,41,63,.06) 0%,rgba(23,41,63,.02) 100%);
   border-left-color:var(--navy)}
+
+/* ================================================================
+   WARMTH & DEPTH — reduce flat white expanse without losing polish
+   ================================================================ */
+
+/* The reading column sits on warm stone; give the page edges a faint
+   gradient so a long article is not one uninterrupted flat field. */
+body{background:linear-gradient(180deg,var(--paper) 0%,#EDE7DB 55%,var(--paper) 100%);
+     background-attachment:fixed}
+
+/* Pull-quotes get a warm ground and a bronze rule instead of floating text */
+.article .beat{background:var(--paper-warm);border-left:3px solid var(--bronze);
+  padding:1.1rem 1.35rem;border-radius:0 4px 4px 0;max-width:none;margin-block:2.5rem}
+
+/* References and disclaimer become contained blocks rather than loose text */
+.article .refs{background:var(--paper-warm);border:1px solid var(--rule);
+  border-radius:4px;padding:1.35rem 1.5rem;margin-top:3rem}
+.article .refs strong{display:block;margin-bottom:.6rem;font-size:.6875rem;
+  letter-spacing:.12em;text-transform:uppercase;color:var(--bronze-dark,#7A5C3C)}
+.article .refs ol{margin:0;padding-left:1.1rem}
+.article .disclaimer{background:var(--paper-deep);border:1px solid var(--rule);
+  border-top:1px solid var(--rule);border-radius:4px;padding:1.2rem 1.4rem;margin-top:1.25rem}
+.article .disclaimer strong{display:block;margin-bottom:.4rem;font-size:.6875rem;
+  letter-spacing:.12em;text-transform:uppercase;color:var(--ink)}
+
+/* Article lead-in gets a warm panel so the top of every piece has weight */
+.article .standfirst{background:var(--paper-warm);border-left:3px solid var(--sage);
+  padding:1rem 1.25rem;border-radius:0 4px 4px 0;margin-bottom:2.25rem}
+
+/* Cards and hub tiles lift off the ground slightly */
+.card,.hub{background:var(--paper)}
+.card:hover,.hub:hover{background:var(--paper-warm)}
+.entry{border-bottom:1px solid var(--rule)}
+
+/* Deepen the alternating band so the section rhythm is actually visible */
+.band--tint{background:var(--paper-warm)}
+.band--deep{background:var(--paper-deep)}
+
+/* ---- Print ---- */
+@media print{
+  .status-banner,nav,.skip,footer .credential,.more,.go,
+  form,button,.coursework,.roadmap{display:none !important}
+  body{background:#fff;color:#000;font-size:11pt}
+  a{color:#000;text-decoration:underline}
+  a[href^="http"]::after{content:" (" attr(href) ")";font-size:9pt;color:#444}
+  .wrap{max-width:none;padding:0}
+  .band,.band--blue,.band--tint{background:#fff !important;color:#000 !important;padding:1rem 0}
+  h1,h2,h3{page-break-after:avoid}
+  .refs,.disclaimer{page-break-inside:avoid;border:1px solid #ccc;padding:.5rem}
+}

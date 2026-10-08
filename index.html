@@ -411,7 +411,7 @@
 
 </main>
 <footer class="wrap">
-<p class="credential">Jerrin Mathew, RN, BSN, CCRN · Psychiatric-Mental Health Nurse Practitioner student · <a href="mailto:hello@jerrinmathew.com">hello@jerrinmathew.com</a></p>
+<p class="credential">Jerrin Mathew, RN, BSN, CCRN · Psychiatric-Mental Health Nurse Practitioner student</p>
 <p>This website is for informational purposes only. It does not provide medical advice, diagnosis, or treatment, and it does not establish a clinician-patient relationship. I am currently completing graduate education in psychiatric-mental health nursing and am not offering independent psychiatric or prescribing services.</p>
 <p>If you are in crisis or having thoughts of suicide, call or text <strong>988</strong> in the United States, or go to your nearest emergency department.</p>
 <p>© <span id="yr">2026</span> Jerrin Mathew. All rights reserved.</p>
@@ -432,13 +432,13 @@
           b.textContent='Sent';return;}
         return r.json().then(function(d){
           var t=(d&&d.errors&&d.errors.length)?d.errors.map(function(x){return x.message;}).join(', ')
-            :'Something went wrong. Please email me directly instead.';
+            :'Something went wrong. Please try again in a moment.';
           m.className='form-status is-err';m.textContent=t;
           b.disabled=false;b.textContent='Notify me';});
       })
       .catch(function(){
         m.className='form-status is-err';
-        m.textContent='Could not reach the server. Please check your connection or email me directly.';
+        m.textContent='Could not reach the server. Please check your connection and try again.';
         b.disabled=false;b.textContent='Notify me';});
   });
 })();
@@ -459,7 +459,6 @@
   "@id": "https://jerrinmathew.com/#practice",
   "name": "Jerrin Mathew - Psychiatric-Mental Health Nursing",
   "url": "https://jerrinmathew.com",
-  "email": "hello@jerrinmathew.com",
   "description": "Psychiatric-mental health nurse practitioner student in Chicago. Educational writing for working professionals. Not currently offering psychiatric or prescribing services.",
   "areaServed": [
     {
@@ -515,7 +514,6 @@
   "name": "Jerrin Mathew - Psychiatric-Mental Health Nursing",
   "description": "Psychiatric-mental health nurse practitioner student in Chicago. Educational writing on ADHD, mood disorders, anxiety, and trauma. Not currently offering psychiatric or prescribing services.",
   "url": "https://jerrinmathew.com",
-  "email": "hello@jerrinmathew.com",
   "areaServed": [
     {"@type": "City", "name": "Chicago", "addressRegion": "Illinois"},
     {"@type": "State", "name": "Illinois", "addressCountry": "US"}

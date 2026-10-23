@@ -514,3 +514,20 @@ footer .credential{font-family:var(--serif);font-size:1.1rem;color:var(--ink);ma
   .band--ink *{color:#000!important}
   h1,h2,h3{page-break-after:avoid}
 }
+/* waitlist: interest question, founding offer, status links */
+.field select{background:transparent;border:0;border-bottom:1px solid #4A607A;border-radius:0;color:#F6F2EA;font-family:var(--sans);font-size:1.05rem;padding:.55rem 0;-webkit-appearance:none;appearance:none}
+.field select:focus{border-bottom-color:var(--bronze-light);outline:none}
+.field select option,.signup-form select option{color:#1E2125}
+.founding{border-left:2px solid var(--bronze-light);padding-left:1rem;color:var(--navy-ink);font-size:.95rem;margin-bottom:2rem}
+.signup-form select{flex:1 1 100%;min-width:0;padding:.75rem .9rem;border:1px solid #3E5571;border-radius:999px;background:rgba(255,255,255,.05);color:#F6F2EA;font:inherit;font-size:.95rem;-webkit-appearance:none;appearance:none}
+.signup-form select:focus{outline:none;border-color:var(--bronze-light)}
+.signup-form .form-status{flex:1 1 100%;margin:.2rem 0 0}
+.signup-founding{margin:1rem 0 0!important;padding-left:.9rem;border-left:2px solid var(--bronze-light);font-size:.88rem!important;color:var(--navy-ink)!important}
+.form-status a{color:inherit;text-decoration:underline;text-underline-offset:2px}
+.notify-select{flex:1 1 100%;width:100%;padding:.85rem 1rem;border-radius:999px;border:1px solid #3E5571;background:rgba(255,255,255,.06);color:#F6F2EA;font:inherit;font-size:1rem;-webkit-appearance:none;appearance:none}
+.notify-select option{color:#1E2125}
+.notify.is-done .notify-select{display:none}
+.contact-alt{margin:0 0 1.2rem;color:var(--navy-soft);font-size:.95rem}
+.contact-links{margin-top:1.6rem;font-size:.9rem;color:var(--navy-soft)}
+.contact-links a,.signup a{color:var(--bronze-light)}
+.signup-alt{margin:1.6rem 0 .8rem!important;color:var(--navy-ink)!important}

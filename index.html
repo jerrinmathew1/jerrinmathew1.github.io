@@ -95,7 +95,7 @@
 <div class="cards">
 <a class="card" href="writing/adhd/">
 <h3>ADHD &amp; Executive Function</h3>
-<p>Do you lose track of time? Struggle to start tasks? Have trouble managing your emotions? Or have you spent years hiding all this from everyone around you? Many high-achievers deal with all of this while their resume shows none of it. <strong>7 articles</strong></p>
+<p>Do you lose track of time? Struggle to start tasks? Have trouble managing your emotions? Or have you spent years hiding all this from everyone around you? Many high-achievers deal with all of this while their resume shows none of it. <strong>9 articles</strong></p>
 <span class="more">Read the Writing</span>
 </a>
 <a class="card" href="writing/sleep-burnout/">
@@ -169,7 +169,7 @@
 </div>
 <div class="bg-grid">
 <div class="prose">
-<p>My clinical career began in emergency medical services and the emergency department, then moved through long-term acute care, cardiac telemetry, and neurocritical care at a Level I trauma center.</p>
+<p>My clinical career began in emergency medical services, then moved through ICU care, skilled nursing, cardiac telemetry, and neurocritical care at a Level I trauma center.</p>
 <p>I am now completing graduate education in psychiatric-mental health nursing. The long-term goal is to bring that same discipline to outpatient psychiatric care for adults carrying significant professional responsibility.</p>
 <a class="more-link" href="about.html">More About My Background</a>
 <div class="certs">
@@ -183,11 +183,11 @@
 </div>
 </div>
 <ul class="path">
-<li><span class="role">Emergency Medical Technician and ER Technician</span><span class="place">Prehospital and emergency department care, Chicago, 2017–2020</span></li>
-<li><span class="role">ICU Patient Care Technician</span><span class="place">Critical care during the COVID-19 surge, 2020–2021</span></li>
-<li><span class="role">Licensed Practical Nurse</span><span class="place">Long-term acute care, October 2022 to June 2025</span></li>
-<li><span class="role">Nursing Home Supervisor</span><span class="place">June 2025 to February 2026</span></li>
-<li><span class="role">Registered Nurse, Cardiac Telemetry</span><span class="place">Level II trauma center, June 2025 to February 2026</span></li>
+<li><span class="role">Emergency Medical Technician</span><span class="place">Ambulance service, Chicago, June 2017 to May 2019</span></li>
+<li><span class="role">ICU Patient Care Technician</span><span class="place">Critical care in Mesa, Arizona, through the COVID-19 surge, June 2019 to May 2021</span></li>
+<li><span class="role">Licensed Practical Nurse</span><span class="place">Skilled nursing, Des Plaines and Elmhurst, October 2022 to June 2025</span></li>
+<li><span class="role">RN House Supervisor</span><span class="place">Skilled nursing facility, June 2025 to May 2026</span></li>
+<li><span class="role">Registered Nurse, Cardiac Telemetry</span><span class="place">Level II trauma center, night shift, six-patient assignments, June 2025 to May 2026</span></li>
 <li><span class="role">Registered Nurse, Neuro ICU</span><span class="place">Level I trauma center, since February 2026. Preceptor for new nurses; floats to the burn ICU and coronary care unit</span></li>
 <li><span class="role">Master of Science in Nursing, in Progress</span><span class="place">PMHNP program, Chamberlain University</span>
 <div class="coursework">
@@ -328,13 +328,15 @@
 <div class="wrap cols">
 <div><span class="eyebrow">Stay Connected</span><h2>You Don't Have to Wait Until Something Breaks.</h2></div>
 <div class="contact-box">
-<p>I'm not accepting patients yet. If you'd like to know when the practice opens, leave an email address and I'll write when there's something worth telling you — not more often.</p>
+<p>I'm not accepting patients yet. Join the list for a free guide, <em>A Professional's Guide to Getting Psychiatric Care in Chicago</em>, plus occasional new writing and first notice when the practice opens in 2028.</p>
+<p class="founding"><strong>Founding members:</strong> the first 25 people on the list will be offered a founding rate on the monthly membership, locked for their first year, when the practice opens.</p>
 <form action="https://formspree.io/f/mrpzwqzb" id="signup-form" method="POST">
 <div class="field"><label for="name">Name</label><input autocomplete="name" id="name" name="name" type="text"/></div>
 <div class="field"><label for="email">Email Address</label><input autocomplete="email" id="email" name="email" required="" type="email"/></div>
+<div class="field"><label for="interest">I'm Interested In</label><select id="interest" name="interest"><option value="">Choose one (optional)</option><option>Monthly membership</option><option>Concierge care</option><option>Care for my team or company</option><option>Referring patients (I'm a clinician)</option><option>Just the writing</option></select></div>
 <input name="_subject" type="hidden" value="Practice updates signup"/>
 <input aria-hidden="true" autocomplete="off" class="hp" name="_gotcha" tabindex="-1" type="text"/>
-<button class="btn btn--light" id="signup-btn" type="submit">Notify Me</button>
+<button class="btn btn--light" id="signup-btn" type="submit">Join and Get the Guide</button>
 <p aria-live="polite" class="form-status" id="signup-status" role="status"></p>
 <p class="form-note">Please don't include health information, symptoms, or clinical questions in this form. It is not a secure or confidential channel, and submitting it does not create a clinician-patient relationship.</p>
 </form>
@@ -349,33 +351,7 @@
 <p>If you are in crisis or having thoughts of suicide, call or text <strong>988</strong> in the United States, or go to your nearest emergency department.</p>
 <p>© <span id="yr">2026</span> Jerrin Mathew. All rights reserved. · <a href="privacy.html">Privacy</a></p>
 </footer>
-<script>
-(function(){
-  var f=document.getElementById('signup-form');
-  if(!f||!window.fetch)return;
-  var b=document.getElementById('signup-btn'),m=document.getElementById('signup-status');
-  f.addEventListener('submit',function(e){
-    e.preventDefault();
-    m.className='form-status';m.textContent='';
-    b.disabled=true;b.textContent='Sending';
-    fetch(f.action,{method:'POST',body:new FormData(f),headers:{'Accept':'application/json'}})
-      .then(function(r){
-        if(r.ok){f.reset();m.className='form-status is-ok';
-          m.textContent='Thank you. You will hear from me when there is something worth sending.';
-          b.textContent='Sent';return;}
-        return r.json().then(function(d){
-          var t=(d&&d.errors&&d.errors.length)?d.errors.map(function(x){return x.message;}).join(', ')
-            :'Something went wrong. Please try again in a moment.';
-          m.className='form-status is-err';m.textContent=t;
-          b.disabled=false;b.textContent='Notify me';});
-      })
-      .catch(function(){
-        m.className='form-status is-err';
-        m.textContent='Could not reach the server. Please check your connection and try again.';
-        b.disabled=false;b.textContent='Notify me';});
-  });
-})();
-</script>
+<script defer src="assets/signup.js"></script>
 <script>document.getElementById('yr').textContent=new Date().getFullYear();</script>
 <script>document.querySelectorAll('.coursework-toggle').forEach(function(b){b.addEventListener('click',function(){var o=b.getAttribute('aria-expanded')==='true',l=document.getElementById(b.getAttribute('aria-controls'));b.setAttribute('aria-expanded',String(!o));if(l)l.hidden=o;});});</script>
 <script type="application/ld+json">

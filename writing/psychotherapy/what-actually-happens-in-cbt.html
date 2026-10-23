@@ -75,7 +75,7 @@
 <img class="authorbox-photo" src="../../assets/portrait-sm.jpg" alt="Jerrin Mathew" width="84" height="84" loading="lazy"/>
 <span class="eyebrow">About the Author</span>
 <h3>Jerrin Mathew, BSN, RN</h3>
-<p>Registered nurse with a clinical background spanning emergency medical services, the emergency department, long-term acute care, cardiac telemetry, and neurocritical care at a Level I trauma center. Currently completing graduate education in psychiatric-mental health nursing, with an expected graduation in 2027.</p>
+<p>Registered nurse with a clinical background spanning emergency medical services, ICU care, skilled nursing, cardiac telemetry, and neurocritical care at a Level I trauma center. Currently completing graduate education in psychiatric-mental health nursing, with an expected graduation in 2027.</p>
 <p>Writing here focuses on the intersection of psychiatric illness and demanding professional life — what gets missed, what gets mislabeled, and what is worth taking to a clinician.</p>
 <a href="../../about.html">More about my background →</a>
 </div>
@@ -97,15 +97,19 @@
 </div>
 <aside class="signup" id="signup">
 <h2>The Practice Opens in 2028. Be Told When.</h2>
-<p>I am completing graduate training in psychiatric-mental health nursing and expect to be licensed in early 2028. If this writing is useful to you, leave your name and I will let you know when I am taking patients — and nothing else.</p>
+<p>I am completing graduate training in psychiatric-mental health nursing and expect to be licensed in early 2028. Join the list for a free guide to getting psychiatric care in Chicago, occasional new writing, and first notice when I am taking patients.</p>
 <form action="https://formspree.io/f/mrpzwqzb" class="signup-form" method="POST">
 <input name="_subject" type="hidden" value="Notification list signup"/>
 <input name="source" type="hidden" value="article"/>
+<input aria-hidden="true" autocomplete="off" class="hp" name="_gotcha" tabindex="-1" type="text"/>
 <input aria-label="Your name" name="name" placeholder="Your name" required="" type="text"/>
 <input aria-label="Email address" name="email" placeholder="Email address" required="" type="email"/>
-<button type="submit">Notify Me</button>
+<select aria-label="I'm interested in" name="interest"><option value="">Choose one (optional)</option><option>Monthly membership</option><option>Concierge care</option><option>Care for my team or company</option><option>Referring patients (I'm a clinician)</option><option>Just the writing</option></select>
+<button type="submit">Get the Free Guide</button>
+<p aria-live="polite" class="form-status" role="status"></p>
 </form>
-<p class="signup-fine">No newsletter, no marketing. One message when the practice opens. Please do not include health information — this is not a confidential channel, and submitting it does not create a clinician-patient relationship.</p>
+<p class="signup-founding"><strong>Founding members:</strong> the first 25 people on the list will be offered a founding rate on the monthly membership, locked for their first year, when the practice opens.</p>
+<p class="signup-fine">Occasional updates, never shared, and you can unsubscribe at any time. Please do not include health information — this is not a confidential channel, and submitting it does not create a clinician-patient relationship.</p>
 </aside></article>
 </main>
 <footer class="wrap">
@@ -180,5 +184,6 @@
       "item": "https://jerrinmathew.com/writing/psychotherapy/what-actually-happens-in-cbt.html"
     }
   ]
-}</script></body>
+}</script><script defer src="../../assets/signup.js"></script>
+</body>
 </html>

@@ -1,5 +1,5 @@
 (function(){
-  var G='/guide/professionals-guide-psychiatric-care-chicago.pdf',S='';
+  var G='/guide/professionals-guide-psychiatric-care-chicago.pdf',S='https://script.google.com/macros/s/AKfycby6zrOouthz9latePJt6Bmxbd0Km3EFxFyhDIWyyuytAVvoXswSSL-AhdQA3R0cgnXVuQ/exec';
   if(!window.fetch)return;
   document.querySelectorAll('form[action*="formspree.io"]').forEach(function(f){
     var b=f.querySelector('button[type=submit]'),m=f.querySelector('.form-status'),label=b?b.textContent:'';

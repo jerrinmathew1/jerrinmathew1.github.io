@@ -61,11 +61,11 @@
 </section>
 
 <div class="wrap">
-<ul class="facts" aria-label="At a glance">
-<li><b>9+ years</b><span>in clinical care, from EMS to the neuro ICU</span></li>
-<li><b>Level I</b><span>trauma center neuro ICU, where I work nights now</span></li>
-<li><b>625 hours</b><span>supervised clinical training, beginning March 2027</span></li>
-<li><b>2028</b><span>anticipated opening, after board certification and licensure</span></li>
+<ul class="facts facts--fun" aria-label="At a glance">
+<li class="fact" id="fact-1"><div class="fact-inner"><button class="fact-front" type="button" aria-expanded="false" aria-controls="fact-back-1"><b>9+ years</b><span>in clinical care, from EMS to the neuro ICU</span><em class="fact-hint" aria-hidden="true">Tap to flip ↻</em></button><div class="fact-back" id="fact-back-1"><p class="fb-title">Six jobs, one thread: mental health seen from the medical side.</p><ol class="fb-jobs"><li style="--d:var(--c-pain)">EMT</li><li style="--d:var(--c-anx)">ICU tech</li><li style="--d:var(--c-mood)">LPN</li><li style="--d:var(--c-aut)">Supervisor</li><li style="--d:var(--c-adhd)">Cardiac</li><li style="--d:var(--c-sleep)">Neuro ICU</li></ol><p class="fb-foot"><a href="#background">See the full story ↓</a><button class="fact-close" type="button" aria-label="Flip back">↺</button></p></div></div></li>
+<li class="fact" id="fact-2"><div class="fact-inner"><button class="fact-front" type="button" aria-expanded="false" aria-controls="fact-back-2"><b>Level I</b><span>trauma center neuro ICU, where I work nights now</span><em class="fact-hint" aria-hidden="true">Tap to flip ↻</em></button><div class="fact-back" id="fact-back-2"><p class="fb-title">The highest level of trauma care, open around the clock. I float across six ICUs:</p><ul class="fb-chips"><li style="--d:var(--c-sleep)">Neuro</li><li style="--d:var(--c-anx)">Medical</li><li style="--d:var(--c-ocd)">Surgical</li><li style="--d:var(--c-adhd)">Burn</li><li style="--d:var(--c-med)">Coronary</li><li style="--d:var(--c-aut)">Step-down</li></ul><p class="fb-foot"><a href="writing/trauma-icu/">Read about ICU psychology →</a><button class="fact-close" type="button" aria-label="Flip back">↺</button></p></div></div></li>
+<li class="fact" id="fact-3"><div class="fact-inner"><button class="fact-front" type="button" aria-expanded="false" aria-controls="fact-back-3"><b>625 hours</b><span>supervised clinical training, beginning March 2027</span><em class="fact-hint" aria-hidden="true">Tap to flip ↻</em></button><div class="fact-back" id="fact-back-3"><p class="fb-title">Where the hours go:</p><div class="fb-bar" role="img" aria-label="500 hours with a psychiatrist and 125 with a psychologist"><i style="--w:80%;--d:var(--c-sleep)"></i><i style="--w:20%;--d:var(--c-ocd)"></i></div><p class="fb-legend"><span style="--d:var(--c-sleep)">500 with a psychiatrist</span><span style="--d:var(--c-ocd)">125 with a psychologist</span></p><p class="fb-foot"><a href="#roadmap">See the road to prescribing ↓</a><button class="fact-close" type="button" aria-label="Flip back">↺</button></p></div></div></li>
+<li class="fact" id="fact-4"><div class="fact-inner"><button class="fact-front" type="button" aria-expanded="false" aria-controls="fact-back-4"><b>2028</b><span>anticipated opening, after board certification and licensure</span><em class="fact-hint" aria-hidden="true">Tap to flip ↻</em></button><div class="fact-back" id="fact-back-4"><p class="fb-title">Countdown to 2028:</p><p class="fb-big"><span data-countdown="2028-01-01T00:00:00">—</span> <small>days to go</small></p><p class="fb-note">Join before then to be a founding member.</p><p class="fb-foot"><a href="#contact">Get the free guide →</a><button class="fact-close" type="button" aria-label="Flip back">↺</button></p></div></div></li>
 </ul>
 </div>
 
@@ -505,6 +505,23 @@
     "Mental health for executives"
   ]
 }
+</script>
+<script>
+(function(){
+var cards=document.querySelectorAll('.facts--fun .fact');
+function set(c,open,f){c.classList.toggle('is-flipped',open);var b=c.querySelector('.fact-front');b.setAttribute('aria-expanded',open?'true':'false');
+ c.querySelector('.fact-back').setAttribute('aria-hidden',open?'false':'true');
+ c.querySelectorAll('.fact-back a,.fact-back button').forEach(function(x){x.tabIndex=open?0:-1;});
+ b.tabIndex=open?-1:0;
+ if(open){var k=c.querySelector('[data-countdown]');if(k)count(k);var cl=c.querySelector('.fact-close');if(cl&&f)setTimeout(function(){cl.focus({preventScroll:true});},50);}else if(f){b.focus({preventScroll:true});}}
+function count(el){var d=Math.max(0,Math.ceil((new Date(el.getAttribute('data-countdown'))-new Date())/864e5));
+ if(matchMedia('(prefers-reduced-motion: reduce)').matches){el.textContent=d.toLocaleString();return;}
+ var t0=null;function step(t){if(!t0)t0=t;var p=Math.min(1,(t-t0)/900);el.textContent=Math.round(d*(1-Math.pow(1-p,3))).toLocaleString();if(p<1)requestAnimationFrame(step);}requestAnimationFrame(step);}
+cards.forEach(function(c){set(c,false,false);
+ c.querySelector('.fact-front').addEventListener('click',function(){set(c,true,true);});
+ c.querySelector('.fact-close').addEventListener('click',function(){set(c,false,true);});
+ c.addEventListener('keydown',function(e){if(e.key==='Escape'&&c.classList.contains('is-flipped'))set(c,false,true);});});
+})();
 </script>
 </body>
 </html>

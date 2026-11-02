@@ -3,3 +3,4 @@ Allow: /
 Disallow: /guide/
 
 Sitemap: https://jerrinmathew.com/sitemap.xml
+Sitemap: https://jerrinmathew.com/feed.xml

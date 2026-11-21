@@ -22,7 +22,8 @@
       var email = form.querySelector('[name=email]').value.trim(), subject = (form.querySelector('[name=_subject]') || {}).value || '';
       var signup = /signup/i.test(subject), offer = form.getAttribute('data-offer'), offerUrl = form.getAttribute('data-offer-url');
       say('', ''); if (btn) { btn.disabled = true; btn.textContent = 'Sending'; }
-      var req = signup ? fetch(SCRIPT, { method: 'POST', mode: 'no-cors', body: new URLSearchParams(new FormData(form)) })
+      var data = new FormData(form); if (signup) data.append('site', LAUNCH ? 'launch' : 'prelaunch');   // tells the email script which site is live
+      var req = signup ? fetch(SCRIPT, { method: 'POST', mode: 'no-cors', body: new URLSearchParams(data) })
                        : fetch(form.action, { method: 'POST', body: new FormData(form), headers: { Accept: 'application/json' } });
       req.then(function (res) {
         if (!signup && !res.ok) return res.json().then(function (j) { throw new Error(j && j.errors && j.errors.length ? j.errors.map(function (x) { return x.message; }).join(', ') : ''); });

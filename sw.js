@@ -1,8 +1,8 @@
 /* jerrinmathew.com: keeps the site's files on the device so repeat visits are fast.
    Pages always come from the network when it answers within 3 seconds; files in /assets/ come from the device.
    A new version name is written on every build, which clears the old copies. */
-const V = 'jm-ebc985ae29';
-const PRE = ['/', '/assets/site.css?v=54606737', '/assets/signup.js?v=8a9d0efa', '/assets/site.js?v=6b2808a4', '/assets/fonts/inter-400.woff2', '/assets/fonts/inter-500.woff2', '/assets/fonts/inter-600.woff2', '/assets/fonts/newsreader-300.woff2', '/assets/fonts/newsreader-400-italic.woff2', '/assets/fonts/newsreader-400.woff2', '/assets/fonts/newsreader-500.woff2', '/assets/portrait-480.webp', '/assets/jm-mark.svg', '/assets/favicon.svg'];
+const V = 'jm-340ca59112';
+const PRE = ['/', '/assets/site.css?v=54606737', '/assets/signup.js?v=7f336e68', '/assets/site.js?v=6b2808a4', '/assets/fonts/inter-400.woff2', '/assets/fonts/inter-500.woff2', '/assets/fonts/inter-600.woff2', '/assets/fonts/newsreader-300.woff2', '/assets/fonts/newsreader-400-italic.woff2', '/assets/fonts/newsreader-400.woff2', '/assets/fonts/newsreader-500.woff2', '/assets/portrait-480.webp', '/assets/jm-mark.svg', '/assets/favicon.svg'];
 self.addEventListener('install', e => { e.waitUntil(caches.open(V).then(c => c.addAll(PRE)).then(() => self.skipWaiting())); });
 self.addEventListener('activate', e => { e.waitUntil(caches.keys().then(ks => Promise.all(ks.filter(k => k !== V).map(k => caches.delete(k)))).then(() => self.clients.claim())); });
 self.addEventListener('fetch', e => {
